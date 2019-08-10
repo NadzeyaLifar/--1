@@ -36,16 +36,16 @@
  while (typeof (age) != 'number' || age == null || age <= 0) {
      age = +prompt ('Введите Возраст еще раз, данные не корректны');
  }
- 
+ function checkRetired () {
  if ((gender.toUpperCase() == 'M' && age >= 63) || (gender.toUpperCase() == 'Ж' && age >=58)) {
-     retired = 'да';
+     return 'Да';
  }
      else {
-     retired = 'нет';
+     return 'Нет';
      }
-  
+    }
  alert ('Полное имя:' + ' ' + str + ' ' + str1 + '\n'
          + 'Пол:' + ' ' + gender.toUpperCase() + '\n'
-         + 'На пенсии:' + ' ' + retired);
+         + 'На пенсии:' + ' ' + checkRetired());
  
  }()); 
