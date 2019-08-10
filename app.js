@@ -1,7 +1,9 @@
 (function () {
 
     'use strict'; 
- 
+
+ (function showUserInfo () {
+
  let firstName = prompt('Введите имя');
  let str = firstName.trim();
  
@@ -31,11 +33,11 @@
  }
  
  let age = +prompt('Введите Ваш возраст в годах');//возраст преобразуем в число
- let retired;
  
  while (typeof (age) != 'number' || age == null || age <= 0) {
      age = +prompt ('Введите Возраст еще раз, данные не корректны');
  }
+
  function checkRetired () {
  if ((gender.toUpperCase() == 'M' && age >= 63) || (gender.toUpperCase() == 'Ж' && age >=58)) {
      return 'Да';
@@ -44,8 +46,11 @@
      return 'Нет';
      }
     }
+
  alert ('Полное имя:' + ' ' + str + ' ' + str1 + '\n'
          + 'Пол:' + ' ' + gender.toUpperCase() + '\n'
          + 'На пенсии:' + ' ' + checkRetired());
+
+    })()
  
  }()); 
