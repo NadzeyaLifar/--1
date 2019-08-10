@@ -31,7 +31,6 @@
  }
  
  let age = +prompt('Введите Ваш возраст в годах');//возраст преобразуем в число
- let retired;
  
  while (typeof (age) != 'number' || age == null || age <= 0) {
      age = +prompt ('Введите Возраст еще раз, данные не корректны');
